@@ -1,0 +1,22 @@
+@import 'reset-css'
+body
+    font-family: Gill Sans, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 游ゴシック体, 'Yu Gothic', YuGothic, メイリオ, Meiryo, Osaka, sans-serif
+
+$pc_min_width: 800px
+
+@mixin pc-layout
+    @media (min-width: $pc_min_width) 
+        @content;
+    
+@mixin sp-layout 
+    @media (max-width: ($pc_min_width - 1)) 
+        @content;
+    
+
+.only-pc
+    @include sp-layout
+        display: none
+
+.only-sp
+    @include pc-layout
+        display: none
