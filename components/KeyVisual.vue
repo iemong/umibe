@@ -27,9 +27,7 @@
         script.src = '//www.youtube.com/iframe_api';
         document.body.appendChild(script);
         return new Promise((resolve) => {
-          console.log("loading");
           window.onYouTubeIframeAPIReady = () => {
-            console.log("ready");
             resolve();
           };
         });
@@ -56,13 +54,11 @@
         );
       },
       onPlayerReady(evt) {
-        console.log("ready")
         evt.target.mute(); // 自動再生できるようにミュートする
         evt.target.playVideo(); // ミュートしてから再生のメソッド叩く
       },
 
       onPlayerStateChange(evt) {
-        console.log("state Change")
         if (evt.data === YT.PlayerState.ENDED) { // 再生終了を検知
           evt.target.playVideo();
           this.isStartedVideo = false;

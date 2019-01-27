@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'ウミベプランニング | クリエイティブコンテンツ企画とオリジナル水着',
+    title: 'ウミベプランニング | クリエイティブコンテンツ企画制作',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=750'},
@@ -12,14 +12,14 @@ module.exports = {
         name: 'description',
         content: 'ウミベプランニングはコンテンツプロデューサー・プランナー楠瀬薫子の屋号です。クリエイティブコンテンツの企画制作を通じ、人を笑顔に、世界をハッピーにするお手伝いをします。受託での企画制作業とオリジナル水着ブランドCOLCA(コルカ)の運営を行っています。'
       },
-      {hid: 'og:title', name: 'og:title', content: 'ウミベプランニング | クリエイティブコンテンツ企画とオリジナル水着'},
+      {hid: 'og:title', name: 'og:title', content: 'ウミベプランニング | クリエイティブコンテンツ企画制作'},
       {hid: 'og:type', name: 'og:type', content: 'website'},
       {hid: 'og:url', name: 'og:url', content: 'http://umibe-planning.jp'},
-      {hid: 'og:site_name', name: 'og:site_name', content: 'ウミベプランニング | クリエイティブコンテンツ企画とオリジナル水着'},
+      {hid: 'og:site_name', name: 'og:site_name', content: 'ウミベプランニング | クリエイティブコンテンツ企画'},
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'ウミベプランニングはコンテンツプロデューサー・プランナー楠瀬薫子の屋号です。クリエイティブコンテンツの企画制作を通じ、人を笑顔に、世界をハッピーにするお手伝いをします。受託での企画制作業とオリジナル水着ブランドCOLCA(コルカ)の運営を行っています。'
+        content: 'ウミベプランニングはクリエイティブコンテンツの企画制作を通じ、人を笑顔に、世界をハッピーにするお手伝いをします。受託での企画制作業とオリジナルブランドCOLCA(コルカ)の運営を行っています。'
       },
       {hid: 'og:image', name: 'og:image', content: 'http://umibe-planning.jp/ogp.png'},
 
