@@ -20,17 +20,22 @@
             +bgWaveSP("#def4f7", 1)
         section.service#service
             h2.service__title service
-            .service__button-wrapper
-                a.service__button(href="", data-type="work", data-active="false")
-                    +picture(`${imgPath}service_txt_work.png`)(class="service__button-image")
-                a.service__button(href="", data-type="bland", data-active="false")
-                    +picture(`${imgPath}service_txt_brand.png`)(class="service__button-image")
-            +bgWave("#8dd7e5", 1)
-            +bgWaveSP("#8dd7e5", 1)
+            ul.service__list
+                li.service__item
+                    p.service-item__title クライアントワーク
+                    img.service-item__pic(src=`${imgPath}service_pic_1.jpg` alt="")
+                    p.service-item__explain 企業や自治体のみなさまが抱えるコミュニケーション課題を明るく楽しく解決すべく、ウェブ/映像などのデジタルや空間/イベントなど、コンテンツ全般の企画制作を行います。
+                    a.service-item__link(href="https://www.instagram.com/umibeplanning/" target="_blank") 最近のお仕事
+                li.service__item
+                    p.service-item__title オリジナルブランド
+                    img.service-item__pic(src=`${imgPath}service_pic_2.jpg` alt="")
+                    p.service-item__explain 水着を中心としたオリジナルプロダクトのD2Cプロジェクト。商品開発/デザイン/生産/販売/ブランディングの全てのプロセスを、ウミベプランニングで手がけています。
+                    a.service-item__link(href="https://colca.jp/" target="_blank") ブランドサイト
         section.about#about
             h2.about__title about
+            img.about__icon(src=`${imgPath}about_pic_1.png` alt="")
             p.about__explain
-                +picture(`${imgPath}about_txt_explain.png`, "楠瀬 薫子 / くすのせ・かおるこ コンテンツプロデューサー・プランナー / 水着ブランド “COLCA“ ディレクター 多摩美術大学生産デザイン学科テキスタイルデザイン専攻卒業。ぬいぐるみメーカーやクリエイティブカンパニー「面白法人カヤック」勤務を経てフリーランス。自治体や企業のみなさまが抱えるコミュニケーション課題を、明るく楽しく解決するお手伝いをしながら、オリジナル水着のブランド“COLCA“の運営を行っています。")(class="about__explain-image")
+                +picture(`${imgPath}about_txt_explain.png`, "楠瀬 薫子 / くすのせ・かおるこ ウミベプランニング代表/プランナー 多摩美術大学生産デザイン学科テキスタイルデザイン専攻卒業。ぬいぐるみメーカーやクリエイティブカンパニー「面白法人カヤック」勤務を経てフリーランス。自治体や企業のみなさまが抱えるコミュニケーション課題を、明るく楽しく解決するお手伝いをしながら、オリジナル水着のブランド“COLCA“の運営を行っています。")(class="about__explain-image")
             +bgWave("#fff", 1)
             +bgWaveSP("#fff", 1)
         .contact#contact
@@ -43,20 +48,20 @@
 </template>
 
 <script>
-import AppHeader from '~/components/AppHeader.vue'
-import KeyVisual from '~/components/KeyVisual.vue'
+import AppHeader from "~/components/AppHeader.vue";
+import KeyVisual from "~/components/KeyVisual.vue";
 
 export default {
-    components: {
-        AppHeader,
-        KeyVisual
-    },
-    methods: {
-      moveScroll(link) {
-        console.log(link)
-      }
+  components: {
+    AppHeader,
+    KeyVisual
+  },
+  methods: {
+    moveScroll(link) {
+      console.log(link);
     }
-}
+  }
+};
 </script>
 
 <style lang="sass" scoped>
@@ -126,7 +131,7 @@ $img-path: "~assets/images/"
 .service
     background-color: #def4f7
 .service__title
-    margin-bottom: 115px
+    margin-bottom: 90px
     @include sp-layout
         margin-bottom: 100px
 .service__button-wrapper
@@ -140,44 +145,40 @@ $img-path: "~assets/images/"
     @include sp-layout
         justify-content: center
         flex-wrap: wrap
-.service__button
-    position: relative
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    width: 460px
-    height: 160px
-    border-radius: 10px
-    @include sp-layout
-        width: 600px
-        height: 170px
-    &:first-of-type
-        @include sp-layout
-            margin-bottom: 84px
-    &:hover
-        @include pc-layout
-            opacity: 0.7
-    &[data-active="true"]
-        background-color: #29b1bf
-    &[data-active="false"]
-        background-color: #bae7ec
-        cursor: default
-        &::after
-            content: ""
-            position: absolute
-            top: -30px
-            left: -70px
-            width: 374px
-            height: 103px
-            background-image: url("#{$img-path}dec_cs.png")
-            background-repeat: no-repeat
-            background-position: center bottom
-            @include sp-layout
-                top: -40px
-                left: -20px
-                background-image: url("#{$img-path}dec_cs_sp.png")
-
+.service__list
+  margin: 0 auto 150px
+  @include pc-layout
+      display: flex
+      justify-content: space-between
+      width: 1000px
+.service__item
+  width: 450px
+  text-align: center
+  @include sp-layout
+    width: 600px
+    margin: 0 auto
+    &:nth-of-type(1)
+      margin-bottom: 100px
+.service-item__title
+  font-size: 24px
+  margin-bottom: 1em
+  @include sp-layout
+    font-size: 28px
+.service-item__pic
+  width: 100%
+  margin-bottom: 10px
+.service-item__explain
+  line-height: 1.75
+  margin-bottom: 1em
+  font-size: 16px
+  @include sp-layout
+    font-size: 26px
+.service-item__link
+  font-size: 16px
+  font-weight: bold
+  color: #000
+  @include sp-layout
+    font-size: 26px
 .about
     background-color: #8dd7e5
 .about__title
@@ -189,6 +190,11 @@ $img-path: "~assets/images/"
     color: #fff
     @include sp-layout
         background-image: url("#{$img-path}dec_wave_reverse_sp.png")
+.about__icon
+    display: block
+    width: 300px
+    height: 300px
+    margin: 0 auto 70px
 .about__explain
     text-align: center
     padding-bottom: 180px
