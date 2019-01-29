@@ -25,12 +25,16 @@
                     p.service-item__title クライアントワーク
                     img.service-item__pic(src=`${imgPath}service_pic_1.jpg` alt="")
                     p.service-item__explain 企業や自治体のみなさまが抱えるコミュニケーション課題を明るく楽しく解決すべく、ウェブ/映像などのデジタルや空間/イベントなど、コンテンツ全般の企画制作を行います。
-                    a.service-item__link(href="https://www.instagram.com/umibeplanning/" target="_blank") 最近のお仕事
+                    a.service-item__link(href="https://www.instagram.com/umibeplanning/" target="_blank")
+                      | 最近のお仕事
+                      font-awesome-icon.service-item__icon(icon="external-link-alt")
                 li.service__item
                     p.service-item__title オリジナルブランド
                     img.service-item__pic(src=`${imgPath}service_pic_2.jpg` alt="")
                     p.service-item__explain 水着を中心としたオリジナルプロダクトのD2Cプロジェクト。商品開発/デザイン/生産/販売/ブランディングの全てのプロセスを、ウミベプランニングで手がけています。
-                    a.service-item__link(href="https://colca.jp/" target="_blank") ブランドサイト
+                    a.service-item__link(href="https://colca.jp/" target="_blank")
+                      | ブランドサイト
+                      font-awesome-icon.service-item__icon(icon="external-link-alt")
         section.about#about
             h2.about__title about
             img.about__icon(src=`${imgPath}about_pic_1.png` alt="")
@@ -179,6 +183,8 @@ $img-path: "~assets/images/"
   color: #000
   @include sp-layout
     font-size: 26px
+.service-item__icon
+  margin-left: 0.5em
 .about
     background-color: #8dd7e5
 .about__title
